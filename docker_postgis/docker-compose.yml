@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  db:
+    image: postgis/postgis
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGIS_USER}
+      POSTGRES_PASSWORD: ${POSTGIS_PASS}
+      POSTGRES_DB: ${POSTGIS_DBNAME}
+    ports:
+      - 5432:5432
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
