@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GisWebApi", "EfCorePostGisDemo\GisWebApi\GisWebApi.csproj", "{D152406C-170A-42F7-B3E6-F46FA9A1CE2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D152406C-170A-42F7-B3E6-F46FA9A1CE2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D152406C-170A-42F7-B3E6-F46FA9A1CE2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D152406C-170A-42F7-B3E6-F46FA9A1CE2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D152406C-170A-42F7-B3E6-F46FA9A1CE2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
