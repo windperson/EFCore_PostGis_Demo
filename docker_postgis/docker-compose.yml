@@ -9,6 +9,8 @@ services:
       POSTGRES_DB: ${POSTGIS_DBNAME}
     ports:
       - 5432:5432
+    volumes:
+      - postgis-data:/var/lib/postgresql/data
   pgadmin:
     image: dpage/pgadmin4
     restart: on-failure
@@ -24,4 +26,5 @@ services:
       - "db:pgsql-server"
 
 volumes:
+  postgis-data:
   pgadmin-data:
