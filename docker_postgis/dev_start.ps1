@@ -1,2 +1,2 @@
-$execStr = "docker-compose.exe --env-file dev.env up -d";
+$execStr = "docker-compose --env-file dev.env up -d $args";
 Invoke-Expression "$execStr";
