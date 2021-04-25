@@ -1,7 +1,9 @@
-version: "3.3"
+version: "3.8"
 services:
   db:
-    image: postgis/postgis
+    container_name: ${POSTGIS_SERVER}
+    hostname: ${POSTGIS_SERVER}
+    image: postgis/postgis:13-3.1-alpine
     restart: on-failure
     environment:
       POSTGRES_USER: ${POSTGIS_USER}
@@ -12,19 +14,23 @@ services:
     volumes:
       - postgis-data:/var/lib/postgresql/data
   pgadmin:
-    image: dpage/pgadmin4
+    container_name: ${PGADMIN_SERVER}
+    hostname: ${PGADMIN_SERVER}
+    image: dpage/pgadmin4:latest
+    depends_on:
+      - db
     restart: on-failure
     environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_USER}
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_USERNAME}@${PGADMIN_DOMAIN}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASS}
       PGADMIN_LISTEN_PORT: 80
+      PGADMIN_SERVER_JSON_FILE: /servers.json
     ports:
-      - ${PGADMIN_PORT}:80
+      - ${PGADMIN_HTTP_PORT}:80
     volumes:
-      - pgadmin-data:/var/lib/pgadmin
-    links:
-      - "db:pgsql-server"
+      - ./pgadmin_conf:/var/lib/pgadmin
+      - ./servers.json:/servers.json:ro
 
 volumes:
   postgis-data:
-  pgadmin-data:
+    name: ${POSTGIS_SERVER}-postgis-data
