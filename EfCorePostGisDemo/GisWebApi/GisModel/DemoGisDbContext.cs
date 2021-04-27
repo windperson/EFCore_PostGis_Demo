@@ -14,15 +14,16 @@ namespace GisWebApi.GisModel
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.HasPostgresExtension("postgis");
-            
+
             #region seed data
 
             var id1Point = new GeographyPointEntity {Id = 1, Location = new Point(1, 1)};
-            var id2Point = new GeographyPointEntity {Id= 2 , Location = new Point(2, 2)};
+            var id2Point = new GeographyPointEntity {Id = 2, Location = new Point(2, 2)};
+            var id3Point = new GeographyPointEntity {Id = 3, Location = new Point(3, 3)};
 
             #endregion
 
-            modelBuilder.Entity<GeographyPointEntity>().HasData(id1Point, id2Point);
+            modelBuilder.Entity<GeographyPointEntity>().HasData(id1Point, id2Point, id3Point);
         }
 
         public DbSet<GeographyPointEntity> Points { get; set; }
