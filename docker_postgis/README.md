@@ -3,7 +3,7 @@
 You need to install:
 
 * [Docker Desktop](https://www.docker.com/products/docker-desktop) if is on Mac / Windows desktop environment.
-* [PowerShell Core v7 or above](https://github.com/PowerShell/PowerShell)
+* [PowerShell Core v7+](https://github.com/PowerShell/PowerShell)
 
 This docker-compose project consist of a [PostGIS](https://postgis.net/) development DB instance and an admin web portal "[pgAdmin](https://www.pgadmin.org/)".
 
