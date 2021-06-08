@@ -36,7 +36,6 @@ namespace GisWebApi
             services.AddDbContext<DemoGisDbContext>(options =>
             {
                 options
-                    .UseLazyLoadingProxies()
                     .UseNpgsql(Configuration.GetConnectionString("DemoGisDb"), builder => builder.UseNetTopologySuite())
                     .UseSnakeCaseNamingConvention()
                     .EnableDetailedErrors(CurrentEnv.IsDevelopment())
