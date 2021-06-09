@@ -1,0 +1,3 @@
+[submodule "docker_postgis"]
+	path = docker_postgis
+	url = https://github.com/GranDen-Corp/dev_docker_postgis.git
