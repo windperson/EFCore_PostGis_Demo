@@ -1,5 +1,4 @@
-﻿using GisWebApi.Dto;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using NetTopologySuite.Geometries;
 
 namespace GisWebApi.GisModel

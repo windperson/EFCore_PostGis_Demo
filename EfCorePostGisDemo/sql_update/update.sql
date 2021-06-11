@@ -51,7 +51,7 @@ DO $$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "migration_id" = '20210324114559_InitalCreate') THEN
     INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
-    VALUES ('20210324114559_InitalCreate', '5.0.5');
+    VALUES ('20210324114559_InitalCreate', '5.0.7');
     END IF;
 END $$;
 COMMIT;
@@ -83,7 +83,7 @@ DO $$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "migration_id" = '20210427091951_Add3rdPresetPoint') THEN
     INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
-    VALUES ('20210427091951_Add3rdPresetPoint', '5.0.5');
+    VALUES ('20210427091951_Add3rdPresetPoint', '5.0.7');
     END IF;
 END $$;
 COMMIT;
