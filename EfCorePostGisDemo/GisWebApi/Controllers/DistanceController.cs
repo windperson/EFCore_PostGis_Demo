@@ -14,7 +14,7 @@ namespace GisWebApi.Controllers
     /// </summary>
     [ApiController]
     [Route("api/[controller]/[action]")]
-    [OpenApiTag("地理距離API", Description = "示範使用NetTopologySuite與PostGis資料庫的")]
+    [OpenApiTag("地理距離API", Description = "示範使用NetTopologySuite與PostGis資料庫的Web API")]
     public class DistanceController : ControllerBase
     {
         private readonly DemoGisDbContext _dbContext;

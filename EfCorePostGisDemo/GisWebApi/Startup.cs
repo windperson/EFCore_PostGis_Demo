@@ -38,7 +38,7 @@ namespace GisWebApi
                 config.PostProcess = document =>
                 {
                     document.Info.Version = "v1";
-                    document.Info.Title = "PostGis 示範 API";
+                    document.Info.Title = "PostGIS 示範 API";
                     document.Info.Description = "A simple ASP.NET Core web API to demo PostGis functionality";
                     document.Info.TermsOfService = "None";
                     document.Info.Contact = new NSwag.OpenApiContact
