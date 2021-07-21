@@ -18,7 +18,7 @@ To start **PostGIS** & **pgAdmin** docker compose service:
 2. Run `dev_start.ps1` script in normal PowerShell session:
   
     ```powershell
-    ./docker_postgis/dev_start.ps1 -compose_proj "efcore_demo" -gis_db "demo_db" -gis_port 5433 -admin_port 8089
+    ./docker_postgis/dev_start.ps1 -compose_proj "efcore_demo" -gis_db "demo_db" -gis_port 5433
     ```
 
     ![startup screen shot](./pics/run_PostGIS.png)
